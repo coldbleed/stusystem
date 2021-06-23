@@ -5,6 +5,15 @@
     <title>查询功能</title>
 </head>
 <body>
-    这是个查询页面
+    学生信息查询 <br>
+    {% for item in list %}
+        <table border="1">
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.sex }}</td>
+                <td>{{ item.age }}</td>
+            </tr>
+    {% endfor %}
 </body>
 </html>

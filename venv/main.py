@@ -52,7 +52,10 @@ def mainPage():
 #搜索
 @app.route('/search')
 def search():
-    return render_template('search.html')
+    list = condb.searchStudent()
+    for item in list:
+        print(item.name, item.sex, item.age)
+    return render_template('search.html', list=list)
 
 
 
